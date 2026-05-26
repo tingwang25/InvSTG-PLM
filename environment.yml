@@ -1,0 +1,59 @@
+# This environment is based on the local LLM-py3.9 environment and the
+# imports used by this project. It keeps the core runtime dependencies instead
+# of exporting unrelated packages from the whole local environment.
+
+name: LLM-py3.9
+
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.9
+  - pip
+
+  # PyTorch stack used by the current LLM-py3.9 environment.
+  - pytorch=2.4.0
+  - torchvision=0.19.0
+  - torchaudio=2.4.0
+  - pytorch-cuda=12.4
+
+  # Project imports.
+  - numpy=1.26.4
+  - scipy=1.13.1
+  - pandas=2.3.3
+  - scikit-learn=1.6.1
+  - matplotlib-base=3.9.4
+  - networkx=3.2.1
+  - pyyaml=6.0.2
+  - tqdm=4.67.1
+
+  - pip:
+      # PyG wheels must match torch 2.4.0 + CUDA 12.4.
+      - --find-links https://data.pyg.org/whl/torch-2.4.0+cu124.html
+      - torch-geometric==2.6.1
+      - torch-scatter==2.1.2+pt24cu124
+      - torch-sparse==0.6.18+pt24cu124
+      - torch-cluster==1.6.3+pt24cu124
+      - torch-spline-conv==1.2.2+pt24cu124
+
+      # Continuous-time and graph/time-series utilities.
+      - torchcde==0.2.5
+      - torchdiffeq==0.2.5
+      - torchsde==0.2.6
+
+      # LLM, LoRA, and experiment dependencies imported by src/model/llm.py
+      # and src/main.py.
+      - modelscope==1.33.0
+      - ms-swift==3.12.1
+      - transformers==4.57.3
+      - accelerate==1.10.1
+      - peft==0.17.1
+      - sentencepiece==0.2.1
+      - safetensors==0.7.0
+      - tokenizers==0.22.2
+      - huggingface-hub==0.36.0
+      - transformers-stream-generator==0.0.5
+      - nni==3.0

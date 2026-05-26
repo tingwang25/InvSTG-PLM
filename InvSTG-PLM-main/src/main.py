@@ -504,7 +504,7 @@ def main(args):
         test_increase_ratio = args.test_increase_ratio,
         test_decrease_ratio = args.test_decrease_ratio,
     )
-    LOG_DIR = os.path.join(args.log_root,f'{get_time_str()}_{args.desc}_test_{args.dataset}_{random_str()}')
+    LOG_DIR = os.path.join(args.log_root,f'{get_time_str()}_{args.desc}_{args.dataset}_{random_str()}')
     check_dir(LOG_DIR,mkdir=True)
     logpath = os.path.join(LOG_DIR,f'experiments.log')
     mylogger = getlogger(logpath)

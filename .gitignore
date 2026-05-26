@@ -1,0 +1,35 @@
+# Python cache and build artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+env/
+.env
+.env.*
+
+# Jupyter/IPython
+.ipynb_checkpoints/
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+
+# Project runtime outputs
+InvSTG-PLM-main/logs/
+logs/
+
+# Model checkpoints and generated weights
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.safetensors

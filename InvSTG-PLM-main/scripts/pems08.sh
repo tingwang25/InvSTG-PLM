@@ -11,7 +11,7 @@ python main.py \
     --val_epoch 1 \
     --test_epoch 5 \
     --batch_size 64\
-    --lr 0.001 \
+    --lr 0.0005 \
     --causal 0 \
     --patience 50 \
     --ln_grad \
@@ -33,11 +33,11 @@ python main.py \
     --device cuda\
     --normalized_k 0.1\
     --causal_ratio 0.7\
-    --alpha 1e-8\
+    --alpha 1e-10\
     --quantile_k 0.5\
     --log_root ../logs\
     --model gpt2\
     --num_nodes 170\
-    --max_increase_ratio 0.5\
-    --test_increase_ratio 0.2\
-    --test_decrease_ratio 0.2\
+    --max_increase_ratio 0.0 \
+    --test_increase_ratio 0.0 \
+    --test_decrease_ratio 0.0 
