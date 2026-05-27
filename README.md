@@ -58,7 +58,7 @@ We use the [PeMS0X](https://dot.ca.gov/programs/traffic-operations/mpr/pems-sour
 
 ## Running Experiments
 
-Run the following commands from `InvSTG-PLM/InvSTG-PLM-main/src`. Please ensure a logs/ directory exists under InvSTG-PLM-main/, or modify the corresponding path to your preferred storage location.
+Run the following commands from `InvSTG-PLM/InvSTG-PLM-main/src`. Please ensure a `logs/` directory exists under `InvSTG-PLM-main/`, or modify the corresponding path to your preferred storage location.
 
 ### Standard setting
 
