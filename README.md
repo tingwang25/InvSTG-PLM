@@ -2,6 +2,11 @@
 Invariant Structure Learning with Pre-trained Language Models for Spatio-temporal Graph 🔥
 </h1>
 
+![Splash Figure](assets/framework.png)
+
+This is the official repository of our KDD 2026 paper. This paper propose an invariance-aware spatiotemporal graph learning framework that grounds PLMs in invariant structures named InvSTG-PLM. We formalize an invariance principle via token re-assignment, which simulates environments in the representation space, and design a variance-regularized objective which penalizes predictors relying on variant factors. Guided by this principle, we introduce a practical realization including the InvSTG-Tokenizer and InvSTG-Adapter, which goes beyond standard serialization by acting as an invariant filter. 
+We implement extensive experiments on both standard and OOD settings, and results demonstrate that InvSTG-PLM achieves competitive performance in terms of both generalization and robustness.
+
 ## Table of Contents
 
 - [Environment Setup](#environment-setup)
@@ -47,7 +52,7 @@ cd InvSTG-PLM/InvSTG-PLM-main/src
 
 ## Data
 
-The [PeMS08](https://dot.ca.gov/programs/traffic-operations/mpr/pems-source) dataset is used by default and loaded automatically. To evaluate on a different dataset, add it to the `data` directory.
+We use the [PeMS0X](https://dot.ca.gov/programs/traffic-operations/mpr/pems-source) traffic datasets, which are collected by the Caltrans Performance Measurement System (PeMS). The raw traffic measurements are recorded every 30 seconds and aggregated into 5-minute intervals, resulting in tens of thousands of time steps for each dataset. The provided default command runs experiments on PeMS03; please use the corresponding script to evaluate another dataset.
 
 ---
 
@@ -58,11 +63,11 @@ Run the following commands from `InvSTG-PLM/InvSTG-PLM-main/src`.
 ### Standard setting
 
 ```bash
-bash ../scripts/pems08.sh
+bash ../scripts/pems03.sh
 ```
 
 ### Out-of-Distribution (OOD) setting
 
 ```bash
-bash ../scripts/pems08_ood.sh
+bash ../scripts/pems03_ood.sh
 ```

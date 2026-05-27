@@ -23,10 +23,6 @@ env/
 .idea/
 .DS_Store
 
-# Project runtime outputs
-InvSTG-PLM-main/logs/
-logs/
-
 # Model checkpoints and generated weights
 *.pt
 *.pth
