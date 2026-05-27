@@ -1,0 +1,47 @@
+python main.py \
+    --data_path "../data/KnowAir/data/KnowAir.npy" \
+    --adj_filename "../data/KnowAir/data/city.txt" \
+    --dataset KnowAir \
+    --desc KnowAir_pre \
+    --sample_len 24 \
+    --predict_len 24 \
+    --train_ratio 0.5 \
+    --val_ratio 0.25 \
+    --epoch 500 \
+    --val_epoch 1 \
+    --test_epoch 5 \
+    --batch_size 64 \
+    --lr 0.0005 \
+    --causal 0 \
+    --patience 50 \
+    --ln_grad \
+    --lora \
+    --t_dim 64 \
+    --node_emb_dim 64 \
+    --node_embedding \
+    --llm_layers 3 \
+    --time_token \
+    --dropout 0.05 \
+    --trunc_k 64 \
+    --weight_decay 0 \
+    --task prediction \
+    --sandglassAttn \
+    --sag_dim 128 \
+    --sag_tokens 128 \
+    --input_dim 20 \
+    --output_dim 1 \
+    --device cuda \
+    --normalized_k 0 \
+    --causal_ratio 0.8 \
+    --alpha 1e-8 \
+    --quantile_k 0.5 \
+    --log_root ../logs \
+    --model gpt2 \
+    --num_nodes 184 \
+    --max_increase_ratio 0 \
+    --test_increase_ratio 0 \
+    --test_decrease_ratio 0 \
+    --eval_sudden_change \
+    --sudden_threshold_start 75 \
+    --sudden_threshold_change 20 \
+    --save_result

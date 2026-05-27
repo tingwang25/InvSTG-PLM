@@ -52,7 +52,7 @@ cd InvSTG-PLM/InvSTG-PLM-main/src
 
 ## Data
 
-We use the [PeMS0X](https://dot.ca.gov/programs/traffic-operations/mpr/pems-source) traffic datasets, which are collected by the Caltrans Performance Measurement System (PeMS). The raw traffic measurements are recorded every 30 seconds and aggregated into 5-minute intervals, resulting in tens of thousands of time steps for each dataset. The provided default command runs experiments on PeMS03; please use the corresponding script to evaluate another dataset.
+We use the [PeMS0X](https://dot.ca.gov/programs/traffic-operations/mpr/pems-source) traffic datasets, which are collected by the Caltrans Performance Measurement System (PeMS). The raw traffic measurements are recorded every 30 seconds and aggregated into 5-minute intervals, resulting in tens of thousands of time steps for each dataset. The provided default command runs experiments on PeMS03; please use the corresponding script to evaluate another dataset. Extra experiments on [TrafficStream](https://github.com/AprLie/TrafficStream) and [KnowAir](https://github.com/shuowang-ai/PM2.5-GNN) can be seen in `InvSTG-PLM/InvSTG-PLM_TrafficStream` and `InvSTG-PLM/InvSTG-PLM-KnowAir` folders.
 
 ---
 
