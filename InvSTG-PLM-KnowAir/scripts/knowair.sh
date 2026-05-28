@@ -33,7 +33,7 @@ python main.py \
     --device cuda \
     --normalized_k 0 \
     --causal_ratio 0.8 \
-    --alpha 1e-8 \
+    --alpha 1e-10 \
     --quantile_k 0.5 \
     --log_root ../logs \
     --model gpt2 \
